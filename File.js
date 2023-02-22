@@ -11,28 +11,40 @@ function getComputerChoice () {
 }
 console.log(getComputerChoice())
 
-function result (x,y) {
+function playRound (x,y) {
     if (x == y) {
 
-        console.log("tie");
+        return("tie");
 
     } else if (x == "rock" && y=="paper"){
-        console.log("you win!!!");
+        return("you win!!!");
 
     } else if (x == "paper" && y == "rock") {
-        console.log("You lost");
+        return("You lost");
 
     } else if (x == "paper" && y== "scissor"){
-        console.log("You win");
+        return("You win");
 
     } else if (x == "scissor" && y == "rock") {
-        console.log("you Win");
+        return("you Win");
 
     } else if (x == "scissor" && y == "paper") {
-        console.log("you lose");
+        return("you lose");
+
     } else if (x == "rock" && y == "scissor") {
-        console.log("You lose!")
+        return("You lose!")
+    }
+
+}
+
+console.log(playRound(x,guess));
+
+function game(z) {
+    for (let i =0; i<5; i++) {
+        return(console.log(z)); 
     }
 }
 
-result(x, guess);
+game(playRound(x,guess));
+
+//console.log(playRound(x, guess)); 
