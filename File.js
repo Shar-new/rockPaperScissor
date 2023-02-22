@@ -1,6 +1,6 @@
 let guess = prompt("Enter either rock, paper or scissor");
 let computerAnswer = ["rock","paper", "scissor"];
-console.log(computerAnswer);
+// console.log(computerAnswer);
 
 guess = guess.toLowerCase();
 
@@ -9,7 +9,7 @@ function getComputerChoice () {
     x = computerAnswer[index];
     return x;
 }
-console.log(getComputerChoice())
+//console.log(getComputerChoice())
 
 function playRound (x,y) {
     if (x == y) {
@@ -37,14 +37,17 @@ function playRound (x,y) {
 
 }
 
-console.log(playRound(x,guess));
+//console.log(playRound(x,guess));
 
 function game(z) {
     for (let i =0; i<5; i++) {
-        return(console.log(z)); 
+        getComputerChoice(); 
+        z = playRound(x,guess);
+        console.log(z)
+        
     }
 }
 
-game(playRound(x,guess));
+game();
 
 //console.log(playRound(x, guess)); 
